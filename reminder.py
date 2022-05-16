@@ -43,7 +43,9 @@ def get_birthdays_per_week(data):
             dic.update({dic_7days_k.strftime('%A'): name_str})
     f = dic.get('Monday', '') + ", " + weekend_str
     dic['Monday'] = f
-    print(dic)
+    # print(dic)
+    for k, v in dic.items():
+        print(k + ': ' + v)
 
 
 get_birthdays_per_week(users)
